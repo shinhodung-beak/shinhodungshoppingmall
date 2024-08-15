@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신호등쇼핑몰</title>
+    <style>
+      body{padding: 0.5em 2em;
+           line-height:1.6;
+           font-size:13px;
+           background-color:lightyellow;  }
+      header ,nav, section{margin-bottom:1em;}
+      h1{ font-size:3em; text-align:center;
+          background-color: #00FF33;
+          border-radius:25px 0px;
+          box-shadow: 6px 6px 15px 6px blue;
+          color:white;
+          border:2px solid #00FF00;
+
+            animation-name: asdf;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+                       }
+            @keyframes  asdf{
+            from  { background-color: #00FFFF;}
+            25%  { background-color: #FFFF00; }
+            50%  { background-color: #00CCFF; }
+            75%  { background-color: #CC33FF; }
+            to     { background-color: #FF9900; }
+          }
+      nav{text-align:center;margin:1em;}
+      nav li{display:inline-block;
+                   background-color: pink;
+                   color:green;
+                   border:2px solid gray;
+                   padding:0.2em 0.5em;
+                   border-radius:10px;
+                   width:50px; }
+      nav li:nth-child(even){
+                   background-color:lightblue;}
+            main{ height:600px; border:2px solid black; background-color:#CCFFFF}
+      footer{ height:50px; border:2px solid black; margin-top:10px;
+              background-color:#CCFF99;
+              padding-top:7px;    }
+        section{float:left;  width:75%;  height:90%; padding:0.1em;
+                margin:0.1em; margin-top:2em;
+               border:1px solid brown;}
+      aside{float:right; width:22%; height:90%; padding:0.1em;
+               margin:0.1em;  margin-top:2em;
+               border:1px solid blue;}
+      .main-top{float:top;  width:97%;  height:45%; padding:0.1em;
+                margin:0.1em;
+               border:1px solid brown;}
+        .main-down{float:down;  width:97%;  height:45%; padding:0.1em;
+                margin: 0.1em ;margin-top:2em;
+               border:1px solid brown;}
+
+      section{float:left;  width:75%;  height:90%; padding:0.1em;
+                margin:0.1em; margin-top:2em;
+               border:1px solid brown;}
+      aside{float:right; width:22%; height:90%; padding:0.1em;
+               margin:0.1em;  margin-top:2em;
+               border:1px solid blue;}
+      .main-top{float:top;  width:97%;  height:45%; padding:0.1em;
+                margin:0.1em;
+               border:1px solid brown;}
+      .main-top-left{float:left;  width:45%;  height:95%; padding:0.1em;
+                margin:0.1em;
+                 border:1px solid brown;}
+        .topleft01{font-size:2em; text-align:center;
+                      background-color: blue; color:white}
+        .topleft02{text-align:center;}
+        .topleft03{font-size:1.5em; text-align:center;
+                        background-color: gray; color:red}
+      .main-top-right{float:right;  width:45%;  height:95%; padding:0.1em;
+                margin:0.1em;
+               border:1px solid brown;}
+        .topright01{font-size:2em; text-align:center;
+                      background-color: blue; color:white}
+        .topright02{text-align:center;}
+        .topright03{font-size:1.5em; text-align:center;
+                        background-color: gray; color:red}
+      .main-down{float:down;  width:97%;  height:45%; padding:0.1em;
+                margin: 0.1em ;margin-top:2em;
+               border:1px solid brown;}
+      .main-down-left{float:left;  width:45%;  height:95%; padding:0.1em;
+                margin:0.1em;
+               border:1px solid brown;}
+        .downleft01{font-size:2em; text-align:center;
+                      background-color: blue; color:white}
+        .downleft02{text-align:center;}
+        .downleft03{font-size:1.5em; text-align:center;
+                        background-color: gray; color:red}
+      .main-down-right{float:right;  width:45%;  height:95%; padding:0.1em;
+                margin:0.1em;
+               border:1px solid brown;}
+        .downright01{font-size:2em; text-align:center;
+                      background-color: blue; color:white}
+        .downright02{text-align:center;}
+        .downright03{font-size:1.5em; text-align:center;
+                        background-color: gray; color:red}
+
+      #span01{color:blue; font-weight:bold;
+      }
+      #span02{color:green; font-weight:bold;
+      }
+      #f_left{float:left; width:40%; margin-left:30px;}
+      #f_right{float:right;width:40%;}
+
+
+aside{
+  margin: 3px;
+padding: 3px;
+margin-top:25px;
+  box-sizing: border-box;
+}
+.aside_01{
+border:solid 1px red;
+height:40%;
+width:100%;}
+
+button {
+  height: 35px;
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+}
+.open {
+  background-color: lightskyblue;
+}
+.close {
+  background-color: pink;
+}
+.modal {
+  background-color:yellow;
+  padding: 15px;
+  border: 5px solid lightgray;
+  border-radius: 15px;
+  box-shadow: 15px 10px 15px grey;
+  display: flex;
+flex-direction: column;
+align-items: center;
+}
+.container {
+  display: none;
+ }
+
+.aside_02{
+border:solid 1px red;
+height:40%;
+width:100%;
+margin-top:10px;
+}
+.aside_02{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_game {
+  display: flex;
+  flex-direction: column;
+  }
+.block {
+  display: flex;
+}
+.button_game {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5em;
+}
+.buttons {
+  display: flex;
+  column-gap: 15px;
+}
+.red {
+  background-color: darkred;
+}
+.blue {
+  background-color: darkblue;
+}
+.green {
+  background-color: darkgreen;
+}
+.result {
+  font-size: 2em;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>신호등 쇼핑몰</h1>
+</header>
+  <nav>
+      <ul>
+       <a href="shinhodungshoppingmall.html" target="blank" title="마블"><li>마블</li></a>
+       <a href="shinhodungshoppingmall_DC.html" target="blank" title="DC"><li>DC</li></a>
+       <a href="shinhodungshoppingmall_BL.html" target="blank" title="BR"><li>브롤</li></a>
+       <a href="shinhodungshoppingmall_BT.html" target="blank" title="BT"> <li>배틀</li></a>
+      </ul>
+  </nav>
+<main>
+  <section>
+      <section class="main-top">
+                <a href="product_001.html" target="blank" title="제품_001">    <article class="main-top-left">
+            <div class="topleft01" >
+               타노스 건틀렛
+            </div>
+            <div class="topleft02">
+              <img src="glove.png" width="150" alt="건틀렛" title="건틀렛">
+            </div>
+            <div class="topleft03">
+                2000$
+            </div>
+      </article></a>
+          <article class="main-top-right">
+              <div class="topright01" >
+               아이언맨 슈트
+            </div>
+            <div class="topright02">
+              <img src="ironmansuit.png" width="150" alt="아이언맨 슈트" title="아이언맨 슈트">
+            </div>
+            <div class="topright03">
+                2500$
+            </div>
+          </article>
+
+      </section>
+      <section class="main-down">
+                    <article class="main-down-left">
+              <div class="downleft01" >
+               캡틴 방패
+            </div>
+            <div class="downleft02">
+              <img src="captin_shield.png" width="150" height="155" alt="방패" title="방패">
+            </div>
+            <div class="downleft03">
+                990$
+            </div>
+          </article>
+          <article class="main-down-right">
+              <div class="downright01" >
+               토르 망치
+            </div>
+            <div class="downright02">
+              <img src="toru_hammer.png" width="150" alt="망치" title="진짜망치">
+            </div>
+            <div class="downright03">
+                999000$
+            </div>
+          </article>
+
+      </section>
+  </section>
+  <aside>
+      <div class="aside aside_01">
+          <button class="open">궁금하면 클릭!</button>
+          <div class="container">
+              <div class="modal">
+                  <h2>안녕하세요!</h2>
+                  <p>개발자 신호등입니다. 좋은 하루 되세요~!</p>
+                  <button class="close">닫고 싶으면 클릭~</button>
+              </div>
+          </div>
+      </div>
+      <div class="aside aside_02">
+<div class="container_game">
+  <div class="block">
+    <h3>컴퓨터 선택 : </h3>
+    <p class="computer-choice">??</p>
+  </div>
+  <div class="block">
+    <h3>당신의 선택 : </h3>
+    <p class="you-choice">??</p>
+  </div>
+</div>
+<div class="buttons">
+  <button class="red button_game">가위</button>
+  <button class="blue button_game">바위</button>
+  <button class="green button_game">보</button>
+</div>
+<div class="result">가위바위보!</div>
+      </div>
+      <div class="aside aside_03"></div>
+  </aside>
+
+</main>
+    <footer>
+      <div id="f_left">문의 전화 : 010-1234-5678<br>
+       주소 : 한국 경기도 하남시 신장동 999번지 </div>
+        <div id="f_right"><span id="span01">주문 문의는 언제나 열려있습니다.</span><br> <span id="span02">관심있으시면 연락 주세요~~!</span> </div>
+    </footer>
+<script>
+    const open = document.querySelector('.open');
+const container = document.querySelector('.container');
+const close = document.querySelector('.close');
+
+open.addEventListener('click', () => {
+  container.style.display = 'flex';
+  open.style.display = 'none';
+});
+
+close.addEventListener('click', () => {
+  container.style.display = 'none';
+  open.style.display = 'block';
+});
+
+const computerChoice = document.querySelector('.computer-choice');
+const userChoice = document.querySelector('.you-choice');
+const theWinner = document.querySelector('.result');
+
+const buttons = document.querySelectorAll('.button_game');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', play);
+})
+
+function play() {
+  const user = event.target.innerText;
+  const randomIndex = Math.floor(Math.random() * 3);
+  const result = ['가위', '바위', '보'];
+  const computer = result[randomIndex];
+  game(user, computer);
+}
+
+function game(user, computer) {
+  let winner;
+  if (user === computer) {
+    winner = '무승부';
+  }
+  else {
+    switch (user + computer) {
+      case '가위바위':
+      case '바위보':
+      case '보가위':
+        winner = '컴퓨터 승!';
+        break;
+      case '가위보':
+      case '바위가위':
+      case '보바위':
+        winner = '당신 승!';
+        break;
+    }
+  }
+  show(user, computer, winner);
+}
+
+function show(user, computer, winner) {
+  userChoice.innerText = user;
+  computerChoice.innerText = computer;
+  theWinner.innerText = winner;
+}
+</script>
+  </body>
+</html>
